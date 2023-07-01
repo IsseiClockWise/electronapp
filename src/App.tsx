@@ -1,25 +1,19 @@
-import React, { useState } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import Button from './components/util/Button';
+import Checkbox from './components/util/Checkbox';
+import TextField from './components/util/TextField';
+import React, { FC } from 'react';
 
-function App() {
-  const [count, setCount] = useState(0);
+interface AppProps{}
+const App :FC<AppProps> = ()=>{
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>{count}</p>
-        <button
-          onClick={() => {
-            console.log();
-            setCount(window.myAPI.counter(count));
-          }}
-        >
-          count
-        </button>
-      </header>
+    <div>
+      flowchart builder !
+
+      <Button>aaa</Button>  {/* ←追加 */}
+      <Checkbox/>  {/* ←追加 */}
+      <TextField/>  {/* ←追加 */}
     </div>
-  );
-}
+  ) ;
+};
 
 export default App;
